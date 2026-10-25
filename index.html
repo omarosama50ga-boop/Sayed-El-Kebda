@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو | سيد الكبدة</title>
+    
+    <!-- Google Fonts for Arabic (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0b1f40', // Main Dark Blue
+                            red: '#d42129',  // Accent Red
+                            gold: '#f6b221', // Primary Gold
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b1f40;
+            /* Subtle background gradient to add depth */
+            background-image: linear-gradient(180deg, #0b1f40 0%, #07142a 100%);
+            background-attachment: fixed;
+        }
+        
+        .menu-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .menu-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Loading animation for image placeholders */
+        .img-wrapper {
+            background: linear-gradient(90deg, rgba(246, 178, 33, 0.1) 25%, rgba(246, 178, 33, 0.2) 50%, rgba(246, 178, 33, 0.1) 75%);
+            background-size: 200% 100%;
+            animation: loading 2s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col antialiased">
+
+    <!-- Header / Branding Area -->
+    <header class="w-full pt-8 pb-4 px-4 flex flex-col items-center justify-center z-10 relative">
+        <!-- Logo Placeholder -->
+        <div class="relative w-28 h-28 md:w-32 md:h-32 mb-4 rounded-full border-4 border-brand-gold shadow-[0_0_15px_rgba(246,178,33,0.5)] overflow-hidden bg-brand-blue">
+            <!-- استبدل رابط الصورة بالأسفل برابط أو مسار اللوجو الحقيقي الخاص بك -->
+            <img src="./img/3.svg" 
+                 alt="لوجو سيد الكبدة" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Restaurant Name -->
+        <h1 class="text-3xl md:text-4xl font-black text-brand-gold tracking-wide drop-shadow-md">
+            سيد الكبدة
+        </h1>
+        
+        <!-- Subtitle/Divider -->
+        <div class="flex items-center gap-3 mt-3 opacity-80">
+            <div class="h-px w-12 bg-brand-red"></div>
+            <span class="text-sm font-semibold tracking-wider">قائمة الطعام</span>
+            <div class="h-px w-12 bg-brand-red"></div>
+        </div>
+    </header>
+
+    <!-- Main Content (Menu Images) -->
+    <main class="flex-grow flex flex-col items-center w-full max-w-3xl mx-auto px-4 py-6 space-y-8">
+        
+        <div class="w-full flex flex-col space-y-6">
+            
+            <!-- Menu Page 1 Placeholder -->
+            <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 img-wrapper">
+                <!-- استبدل رابط الصورة بالأسفل بمسار صورة المنيو الأولى (مثال: 1.jpg) -->
+                <img src="./img/1.svg" 
+                     alt="الصفحة الأولى من قائمة الطعام" 
+                     class="w-full h-auto object-cover menu-image relative z-10"
+                     loading="lazy">
+            </div>
+
+            <!-- Menu Page 2 Placeholder -->
+            <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 img-wrapper">
+                <!-- استبدل رابط الصورة بالأسفل بمسار صورة المنيو الثانية (مثال: 2.jpg) -->
+                <img src="./img/2.svg" 
+                     alt="الصفحة الثانية من قائمة الطعام" 
+                     class="w-full h-auto object-cover menu-image relative z-10"
+                     loading="lazy">
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer & Call to Action -->
+    <footer class="w-full max-w-3xl mx-auto px-4 pb-12 pt-4 text-center mt-auto">
+        <a href="https://www.facebook.com/share/1DkPAp8hTS/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-[#1877F2] hover:bg-[#166fe5] text-white text-lg font-bold py-4 px-8 rounded-2xl shadow-[0_8px_20px_rgba(24,119,242,0.3)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(24,119,242,0.5)] border border-[#1877F2]/50">
+            <i class="fa-brands fa-facebook text-2xl"></i>
+            <span>تابعنا على فيسبوك</span>
+        </a>
+    </footer>
+
+</body>
+</html>
